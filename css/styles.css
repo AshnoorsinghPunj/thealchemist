@@ -1,3 +1,4 @@
+/* Custom font-face for 'BullettoKilla' */
 @font-face {
   font-family: 'BullettoKilla';
   src: url('/fonts/bulletto-killa/Bulletto\ Killa.ttf') format('truetype');
@@ -5,18 +6,21 @@
   font-style: normal;
 }
 
-*{
+/* Global font family */
+* {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-body{
-  min-height: 100vh;
+body {
+  min-height: 100vh; /* Ensures body occupies full viewport height */
 }
 
-h1, h2, h3, h4, h5, h6{
+/* Heading font family */
+h1, h2, h3, h4, h5, h6 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* Navbar brand customization */
 header .navbar-brand {
   font-family: "BullettoKilla";
   font-weight: bold;
@@ -27,7 +31,7 @@ header .navbar-brand {
 }
 
 header .navbar-brand::after {
-  content: attr(data-text);
+  content: attr(data-text); /* Dynamic text from "data-text" attribute */
   height: 100%;
   width: 0;
   position: absolute;
@@ -35,7 +39,7 @@ header .navbar-brand::after {
   left: 0;
   background: none;
   overflow: hidden;
-  -webkit-text-fill-color: black; 
+  -webkit-text-fill-color: black;
   color: black;
   white-space: nowrap;
   z-index: 1;
@@ -43,41 +47,44 @@ header .navbar-brand::after {
 }
 
 header .navbar-brand:hover::after {
-  width: 100%;
+  width: 100%; /* Expand black highlight on hover */
 }
 
-header .nav-link{
+/* Navbar link transitions */
+header .nav-link {
   transition: all 0.15s ease-in-out;
 }
 
-header .nav-link.active{
+header .nav-link.active {
   color: #dc3545 !important;
 }
 
-header .nav-link:hover{
+header .nav-link:hover {
   color: #dc3545 !important;
   text-shadow: rgba(256, 256, 256, 0.4) 1px 1px 1px;
 }
 
-main .carousel{
+/* Carousel styling */
+main .carousel {
   transition: all 0.2s ease-in-out;
   box-shadow: rgba(256, 256, 256, 0.9) 0px 2px 2px;
 }
 
-main .carousel:hover{
+main .carousel:hover {
   box-shadow: rgba(256, 256, 256, 0.2) 0px 5px 10px;
 }
 
-main .carousel img{
+main .carousel img {
   transition: all 0.3s ease-in-out;
 }
 
-main .carousel:hover img{
-  scale: 1.1;
-  rotate: 10deg;
+main .carousel:hover img {
+  scale: 1.1; /* Image zoom effect */
+  rotate: 10deg; /* Image rotation effect */
 }
 
-.custOverlay{
+/* Custom overlay for cards */
+.custOverlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -87,7 +94,8 @@ main .carousel:hover img{
   z-index: 2;
 }
 
-main .carousel .custOverlayBestseller{
+/* Bestseller ribbon styling */
+main .carousel .custOverlayBestseller {
   position: absolute;
   top: 25px;
   left: -105px;
@@ -101,10 +109,10 @@ main .carousel .custOverlayBestseller{
   text-transform: uppercase;
   color: white;
   font-weight: bold;
-
 }
 
-main .carouselControls{
+/* Carousel control button positioning */
+main .carouselControls {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -112,11 +120,21 @@ main .carouselControls{
   z-index: 3;
 }
 
-main .carousel img{
+/* Carousel image height for desktop and responsiveness */
+main .carousel img {
   height: 500px;
 }
 
-.author img{
+/* Stylings for mobile or tab screens  */
+
+@media screen and (max-width: 768px) {
+  main .carousel img {
+    height: 300px;
+  }
+}
+
+/* Author image styling */
+.author img {
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
@@ -124,54 +142,60 @@ main .carousel img{
   height: 100px;
 }
 
-.aboutAuthor::first-letter{
+/* Styling for the first letter in author details */
+.aboutAuthor::first-letter {
   font-size: 1.5rem;
   color: #dc3545;
 }
 
-.reviewItem{
+/* Review card styling */
+.reviewItem {
   box-shadow: #dc3545 4px 4px 3px !important;
   border: 2px solid #dc3545;
   width: 98%;
 }
 
-.reviewItem p{
+.reviewItem p {
   font-family: 'Times New Roman', Times, serif;
 }
 
-.reviewItem cite{
+.reviewItem cite {
   font-family: cursive;
   font-style: italic;
   font-size: 0.9rem;
 }
 
-.reviewItem i.fa-star{
+.reviewItem i.fa-star {
   font-size: 0.9rem;
 }
 
-.bookDetailsTabs .nav-pills .nav-item .nav-link.active{
+/* Book details tab styling */
+.bookDetailsTabs .nav-pills .nav-item .nav-link.active {
   background-color: #dc3545;
   color: #fff;
 }
 
-.accordion-button::after{
+/* Accordion button customization */
+.accordion-button::after {
   background: white;
   border-radius: 50%;
 }
 
-.accordion-button:hover{
+.accordion-button:hover {
   text-decoration: underline;
 }
 
-#detailsAccordionOne, #publisherAccordionTwo, #awardsAccordionThree{
+#detailsAccordionOne, #publisherAccordionTwo, #awardsAccordionThree {
   font-size: 0.85rem;
 }
 
+/* Quotes animation */
 #quotes {
   overflow: hidden;
   height: 90px;
   position: relative;
 }
+
 #quotes p {
   margin: 0;
   position: absolute;
@@ -179,12 +203,16 @@ main .carousel img{
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+
 .slide-up {
   animation-name: slideUp;
 }
+
 .slide-down {
   animation-name: slideDown;
 }
+
+/* Slide up animation keyframes */
 @keyframes slideUp {
   from {
     transform: translateY(120%);
@@ -193,6 +221,8 @@ main .carousel img{
     transform: translateY(0);
   }
 }
+
+/* Slide down animation keyframes */
 @keyframes slideDown {
   from {
     transform: translateY(0);
@@ -202,45 +232,35 @@ main .carousel img{
   }
 }
 
-#quotes p::before{
+/* Quotes styling with opening and closing symbols */
+#quotes p::before {
   content: "❝";
   margin-right: 4px;
   font-size: 1.3rem;
 }
 
-#quotes p::after{
+#quotes p::after {
   content: "❞";
   margin-left: 4px;
   font-size: 1.3rem;
 }
 
-.buy-now input::placeholder, .buy-now textarea::placeholder{
+/* Placeholder color customization */
+.buy-now input::placeholder, .buy-now textarea::placeholder {
   color: #9d9d9d;
 }
 
-.card .custOverlay{
-  width: 96%;
-  top: 50%;
-  left: 50%;
-  transform: translate( -50%, -50%);
-  background: linear-gradient(to bottom, transparent, rgb(29, 29, 29));
-}
-
-.subscribe input[type=email]::placeholder{
+.subscribe input[type=email]::placeholder {
   color: white;
 }
 
-footer .nav-link:hover{
+/* Footer link hover effect */
+footer .nav-link:hover {
   color: #dc3545 !important;
   text-shadow: rgba(256, 256, 256, 0.4) 1px 1px 1px;
 }
 
-.scrollToTop{
+/* Scroll to top button styling */
+.scrollToTop {
   cursor: pointer;
-}
-
-@media screen and (max-width: 768px){
-  main .carousel img{
-    height: 300px;
-  }
 }
