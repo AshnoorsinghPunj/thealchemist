@@ -5,21 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Alchemist by Paulo Coelho</title>
+    <!-- Style files -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Fontawesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
 
 <body class="bg-black text-light">
     <header>
+        <!-- Navigation bar -->
         <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
             <div class="container-fluid">
                 <a class="navbar-brand" data-text="The Alchemist" href="#">The Alchemist</a>
+                <!-- Navbar toggler button for medium sized or smll devices -->
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                     aria-controls="navbarContent" aria-expanded="false" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarContent">
+                    <!--- Navigation links -->
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" href="/">Home</a>
@@ -45,8 +50,10 @@
     </header>
 
     <main class="container py-5">
+        <!-- Main content of the page -->
         <div class="row row-gap-5">
             <div class="col-12 col-lg-7">
+                <!-- Book Cover Carousel -->
                 <div class="carousel slide rounded-4 overflow-hidden" id="bookImages">
                     <div class="custOverlay"></div>
                     <div class="custOverlayBestseller">Bestseller</div>
@@ -77,6 +84,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-5">
+                <!-- Author details and book information -->
                 <div class="author d-flex gap-3 align-items-center">
                     <img src="assets/author.png" alt="Author" class="shadow rounded-circle">
                     <div>
@@ -94,6 +102,7 @@
                     has been translated into at least 80 languages and has sold more than a million copies to date.
                 </p>
                 <div class="reviews mt-4">
+                    <!-- Book Reviews Section -->
                     <h4 class="fw-bold mb-3">Reviews</h4>
                     <div class="reviewsItems d-flex flex-column gap-3">
                         <div class="row reviewItem p-3 mx-auto rounded-1 overflow-hidden">
@@ -156,6 +165,7 @@
                     </div>
                 </div>
                 <div class="bookDetailsTabs mt-4">
+                    <!-- Book Details Tabs (Synopsis, details, Quotes) -->
                     <ul class="nav nav-pills bg-dark nav-justified rounded p-2" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active text-white" id="synopsisTab" data-bs-toggle="tab"
@@ -255,6 +265,7 @@
                 </div>
 
                 <form class="buy-now mt-4" id="purchaseForm">
+                    <!-- Purchase form -->
                     <h4 class="col-12">Buy Now</h4>
 
                     <div class="row pt-2">
@@ -339,11 +350,13 @@
 
             </div>
             <div class="col-12 moreByAuthor">
+                <!-- More books by the author section -->
                 <h3 class="mb-4">More From Paulo Coelho</h3>
                 <div class="row gy-4 cards">
                 </div>
             </div>
             <div class="col-12 d-flex flex-column subscribe">
+                <!-- Newsletter subscription section -->
                 <h3>Get Notified</h3>
                 Sign up for our newsletter to recieve updates and exclusive content about The Alchemist and other
                 inspiring books. <br>
@@ -380,6 +393,7 @@
     </main>
 
     <footer class="bg-dark text-light py-4">
+        <!-- Footer section of the webpage -->
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4">
@@ -419,11 +433,13 @@
         </div>
     </footer>
 
+    <!-- Scroll to top button -->
     <div class="position-fixed d-flex justify-content-center align-content-center bottom-0 end-0 mb-3 me-3 bg-light p-2 rounded-circle scrollToTop"
         onclick="scrollToTop()">
         <i class="fa fa-angle-up fs-4 text-black"></i>
     </div>
 
+    <!-- Scripts -->
     <script src="js/script.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
 </body>
