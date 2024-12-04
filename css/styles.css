@@ -39,15 +39,15 @@ header .navbar-brand::after {
   left: 0;
   background: none;
   overflow: hidden;
-  -webkit-text-fill-color: black;
-  color: black;
+  -webkit-text-fill-color: white;
+  color: white;
   white-space: nowrap;
   z-index: 1;
   transition: width 0.25s linear;
 }
 
 header .navbar-brand:hover::after {
-  width: 100%; /* Expand black highlight on hover */
+  width: 100%; /* Expand highlight on hover */
 }
 
 /* Navbar link transitions */
