@@ -230,6 +230,11 @@ main .carousel img{
   color: white;
 }
 
+footer .nav-link:hover{
+  color: #dc3545 !important;
+  text-shadow: rgba(256, 256, 256, 0.4) 1px 1px 1px;
+}
+
 .scrollToTop{
   cursor: pointer;
 }
